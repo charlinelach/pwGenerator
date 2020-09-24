@@ -38,25 +38,46 @@ function generatePassword() {
 
   //alert if no criteria selected
   for (var pwBuild = 0; pwBuild < pwLength; pwBuild++) {
-    if ((confirmLow = true) && (confirmHigh = true) && (confirmNumbers = true) && (confirmSymbols = true)) {
+    // All characters wanted
+    if ((confirmLow = true) && (password.length < pwLength)) {
+      
       var lowLetterPick = Math.floor(Math.random() * lowercase.length)
       password = password + lowercase[lowLetterPick];
       console.log(password);
-    }
-    // } else if ((confirmLow = true) && (confirmHigh = true) && (confirmNumbers = true)) {
-      
-    // } else if ((confirmLow = true) && (confirmHigh = true)) {
-
-    // } else if ((confirmLow = true)
     
-    //random number, then pull IF confirmed
-    //random letter, then pull IF confirmed
+    }
+
+    if ((confirmHigh = true) && (password.length < pwLength)) {
+      
+      var hiLetterPick = Math.floor(Math.random() * uppercase.length)
+      password = password + uppercase[hiLetterPick];
+      console.log(password);
+      
+    }
+
+    if ((confirmNumbers = true) && (password.length < pwLength)) {
+      
+      var numPick = Math.floor(Math.random() * number.length)
+      password = password + number[numPick];
+      console.log(password);
+      
+    }
+
+    if ((confirmSymbols = true) && (password.length < pwLength)) {
+      
+      var symPick = Math.floor(Math.random() * symbol.length)
+      password = password + number[symPick];
+      console.log(password);
+      
+    }
 
   }
 
   return password;
 
 }
+
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
