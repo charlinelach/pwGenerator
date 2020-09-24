@@ -11,16 +11,16 @@ function writePassword() {
 
 function generatePassword() {
   // Variables/arrays
-  // var password = "";
-  // var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-  // var uppercase = lowercase.toUpperCase();
-  // var number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  // var symbol = ["~", "!", "@", "#", "$", "%", "&", "-", "+", "=", "_"];
+  var password = "";
+  var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  var number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  var symbol = ["~", "!", "@", "#", "$", "%", "&", "-", "+", "=", "_"];
 
-  var length = prompt("How many password characters are you seeking?");
+  var pwLength = prompt("How many password characters are you seeking?");
   
   // If they put a number out of the 8 to 128 Range.
-  if ((length < 8) || (length > 128)) {
+  if ((pwLength < 8) || (pwLength > 128)) {
     alert("You may only have a password from 8 to 128 characters!");
     return valid;
   }
@@ -37,13 +37,25 @@ function generatePassword() {
   }
 
   //alert if no criteria selected
-  for (var pwBuild = 0; pwBuild < length; pwBuild++) {
+  for (var pwBuild = 0; pwBuild < pwLength; pwBuild++) {
+    if ((confirmLow = true) && (confirmHigh = true) && (confirmNumbers = true) && (confirmSymbols = true)) {
+      var lowLetterPick = Math.floor(Math.random() * lowercase.length)
+      password = password + lowercase[lowLetterPick];
+      console.log(password);
+    }
+    // } else if ((confirmLow = true) && (confirmHigh = true) && (confirmNumbers = true)) {
+      
+    // } else if ((confirmLow = true) && (confirmHigh = true)) {
+
+    // } else if ((confirmLow = true)
+    
     //random number, then pull IF confirmed
     //random letter, then pull IF confirmed
 
   }
 
   return password;
+
 }
 
 // Add event listener to generate button
