@@ -21,7 +21,7 @@ function generatePassword() {
   
   // If they put a number out of the 8 to 128 Range.
   if ((pwLength < 8) || (pwLength > 128)) {
-    alert("You may only have a password from 8 to 128 characters!");
+    alert("You may only have a password from 8 to 128 characters! Try again!");
     return valid;
   }
 
@@ -31,15 +31,16 @@ function generatePassword() {
   var confirmNumbers = confirm("Do you want numbers?");
   var confirmSymbols = confirm("Do you want special characters?");
 
-  if ((confirmLow = false) && (confirmHigh = false) && (confirmNumbers = false) && (confirmSymbols = false)) {
-    alert("At least ONE character type must be selected.");
+  if ((confirmLow == false) && (confirmHigh == false) && (confirmNumbers == false) && (confirmSymbols == false)) {
+    alert("At least ONE character type must be selected. Try again!");
     return valid;
   }
 
   //alert if no criteria selected
   for (var pwBuild = 0; pwBuild < pwLength; pwBuild++) {
+    
     // All characters wanted
-    if ((confirmLow = true) && (password.length < pwLength)) {
+    if ((confirmLow == true) && (password.length < pwLength)) {
       
       var lowLetterPick = Math.floor(Math.random() * lowercase.length)
       password = password + lowercase[lowLetterPick];
@@ -47,7 +48,7 @@ function generatePassword() {
     
     }
 
-    if ((confirmHigh = true) && (password.length < pwLength)) {
+    if ((confirmHigh == true) && (password.length < pwLength)) {
       
       var hiLetterPick = Math.floor(Math.random() * uppercase.length)
       password = password + uppercase[hiLetterPick];
@@ -55,7 +56,7 @@ function generatePassword() {
       
     }
 
-    if ((confirmNumbers = true) && (password.length < pwLength)) {
+    if ((confirmNumbers == true) && (password.length < pwLength)) {
       
       var numPick = Math.floor(Math.random() * number.length)
       password = password + number[numPick];
@@ -63,10 +64,10 @@ function generatePassword() {
       
     }
 
-    if ((confirmSymbols = true) && (password.length < pwLength)) {
+    if ((confirmSymbols == true) && (password.length < pwLength)) {
       
       var symPick = Math.floor(Math.random() * symbol.length)
-      password = password + number[symPick];
+      password = password + symbol[symPick];
       console.log(password);
       
     }
@@ -76,8 +77,6 @@ function generatePassword() {
   return password;
 
 }
-
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
