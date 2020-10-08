@@ -29,9 +29,9 @@ To utilize this application, users may access it via the [deploy link](https://c
 N/A
 
 ## Credits & Thank Yous
-Again, the classmates deserve a lot of credit for asking questions and receiving answers before I ever faced them. This has helped my create the application at a faster service than otherwise.
+Again, the classmates deserve a lot of credit for asking questions and receiving answers before I ever faced them. This has helped me create the application faster than otherwise.
 <br>
-And huge shout out to the instructor and TAs for answering questions in office hours, class, lunch, and more!
+Huge shout out to the instructor and TAs for answering questions in office hours, class, lunch, and more!
 
 # License Information
 MIT License
