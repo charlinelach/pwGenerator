@@ -1,11 +1,15 @@
 # Password Generator
 The purpose of this project is to provide end users/employees a way to produce new, more secure passwords. The password will be random and based on some selections.
 
+
 **Created**: `2020 September 24`
 <br>
 Deployed at: https://charlinelach.github.io/pwGenerator/
 <br>
 Repository: https://github.com/charlinelach/pwGenerator
+
+## Technologies
+HTML, CSS, JavaScript
 
 # Development
 
@@ -18,6 +22,8 @@ To utilize this application, users may access it via the [deploy link](https://c
 5. Is the use of special characters wanted?
 
 ![Password Generator Screenshot](pwGeneratorScreenshot.png)
+<br>
+![Password Generator GIF](pw.gif)
 
 ## Installation Instructions
 N/A
@@ -28,4 +34,5 @@ Again, the classmates deserve a lot of credit for asking questions and receiving
 And huge shout out to the instructor and TAs for answering questions in office hours, class, lunch, and more!
 
 # License Information
-N/A
+MIT License
+Copyright (c) 2020
